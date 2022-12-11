@@ -3,7 +3,6 @@ a) WAN an LAN IP assigning (address)
 b) Gateway IP assining (Router)
 c) DNS IP assigning and NAT rule creation (DNS)
 
-....................................................................
 1. Microtik Basic Configration (LAN DHCP, WAN [DHCP Client/ Static IP/ PPPOE Client]).
 
 	::LAN DHCP::
@@ -20,7 +19,6 @@ c) DNS IP assigning and NAT rule creation (DNS)
 	::PPPOE Client::
 	>>> ppp / interface > plus button > general > select interface "WAN' > Dial out (ISP provide 'username' 'password', tikemark 'use peer DNS' > ok
 	
-....................................................................
 2. Configure Microtik as a Router where WAN is useing Static IP and LAN is useing DHCP server.
 
 	::Static IP:::
@@ -30,7 +28,6 @@ c) DNS IP assigning and NAT rule creation (DNS)
 	::LAN > DHCP Server::
 	>>> ip > DHCP server > DHCP setup > select LAN interface and configration
 	
-...................................................................
 3. Configure Microtik router as a Gateway where WAN haveing DHCP protocol, and configure LAN network.
 
 	::WAN getway::
@@ -51,7 +48,7 @@ c) DNS IP assigning and NAT rule creation (DNS)
 	:: NAT rull::
 	>>> ip > firewall > NAT > General (Chain"srcnat",out.interface"pppoe.out interface") > Action (masquerade) > ok
 	
-..................................................................
+
 5. Design ISP for (100Mb Bandwidth) and Create 4 packages for customer.
 
 	::Pool create::
