@@ -5,18 +5,18 @@ c) DNS IP assigning and NAT rule creation (DNS)
 
 1. Microtik Basic Configration (LAN DHCP, WAN [DHCP Client/ Static IP/ PPPOE Client]).
 
-	::LAN DHCP::
+::LAN DHCP::
 	>>> ip > address > plus button > creat static ip > select LAN interface > ok
 
-	::DHCP Client::
+::DHCP Client::
 	>>> ip > DHCP client > plus button > select WAN interface > ok
 	
-	::Static IP:::
+::Static IP:::
 	>>> ip >>> address > plus button > IP (ISP provide ip)  > select WAN interface > ok
 	>>> ip > routers > plus button > add getway(ISP provide ip address) > ok
 	
 	
-	::PPPOE Client::
+::PPPOE Client::
 	>>> ppp / interface > plus button > general > select interface "WAN' > Dial out (ISP provide 'username' 'password', tikemark 'use peer DNS' > ok
 	
 2. Configure Microtik as a Router where WAN is useing Static IP and LAN is useing DHCP server.
